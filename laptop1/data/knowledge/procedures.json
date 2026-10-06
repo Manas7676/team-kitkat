@@ -1,0 +1,96 @@
+[
+ {
+  "id": "PROC-THERM-01",
+  "name": "PROC-THERM-01",
+  "text": "Compare Sensor A against redundant thermal sensors and verify calibration; continue monitoring the thermal trend.",
+  "tags": [
+   "thermal_01",
+   "thermal",
+   "sensor",
+   "temperature",
+   "disagreement",
+   "redundant"
+  ]
+ },
+ {
+  "id": "PROC-PWR-01",
+  "name": "PROC-PWR-01",
+  "text": "Verify solar generation against load and review the battery discharge trend; prepare a non-critical load-shedding plan for operator review.",
+  "tags": [
+   "power_01",
+   "power",
+   "power",
+   "voltage",
+   "battery",
+   "solar",
+   "degradation"
+  ]
+ },
+ {
+  "id": "PROC-SNS-01",
+  "name": "PROC-SNS-01",
+  "text": "Compare the noisy channels against redundant sensors, inspect harness/ADC status, and review filtering.",
+  "tags": [
+   "noise_01",
+   "thermal",
+   "noise",
+   "fluctuation",
+   "sensor",
+   "redundant"
+  ]
+ },
+ {
+  "id": "PROC-ATT-01",
+  "name": "PROC-ATT-01",
+  "text": "Cross-check gyroscope against star tracker and review reaction wheel state.",
+  "tags": [
+   "attitude_01",
+   "attitude",
+   "attitude",
+   "pointing",
+   "drift",
+   "gyroscope"
+  ]
+ },
+ {
+  "id": "PROC-COMM-01",
+  "name": "PROC-COMM-01",
+  "text": "Check antenna pointing and link budget; verify transmitter power.",
+  "tags": [
+   "comm_01",
+   "communication",
+   "signal",
+   "latency",
+   "antenna",
+   "link"
+  ]
+ },
+ {
+  "id": "PROC-PL-01",
+  "name": "PROC-PL-01",
+  "text": "Review payload duty cycle and power draw; consider placing the payload in standby.",
+  "tags": [
+   "payload_01",
+   "payload",
+   "payload",
+   "load",
+   "overload",
+   "duty"
+  ]
+ },
+ {
+  "id": "PROC-CAS-01",
+  "name": "PROC-CAS-01",
+  "text": "Restore power margin first, then re-evaluate payload and communication loads.",
+  "tags": [
+   "cascade_01",
+   "power",
+   "cascade",
+   "propagation",
+   "solar",
+   "power",
+   "battery",
+   "communication"
+  ]
+ }
+]

@@ -1,0 +1,6 @@
+export default function Incidents({L,go,setSel}:{L:any,go:(p:string)=>void,setSel:(id:string)=>void}){const list=L.incidents||[];
+ return <div className="card"><h3>Incidents</h3>{list.length?<table><thead><tr><th>ID</th><th>Time</th><th>Incident</th><th>Subsystem</th><th>Severity</th><th>Status</th><th>Description / Affected Systems</th></tr></thead><tbody>
+ {list.map((i:any)=><tr key={i.incident_id} className={'click '+(i.status=='INVESTIGATING'?'activerow':'')} onClick={()=>{setSel(i.incident_id);go('Investigation')}}>
+  <td><b>{i.incident_id}</b><br/><small>{i.scenario_id}</small></td><td>{i.detected.slice(11,19)}</td><td><b>{i.title}</b></td><td>{i.subsystem}</td><td><span className={'sev '+i.severity.toLowerCase()}>{i.severity}</span></td>
+  <td className={i.status=='INVESTIGATING'?'st-anomaly':''}><b>{i.status}</b></td>
+  <td>{i.description}<div><b>Affected:</b> {i.affected_systems.join(' · ')||'—'}</div>{i.potential_systems.length>0&&<div className="st-warning"><b>Potential:</b> {i.potential_systems.join(' · ')}</div>}<div className="muted"><b>Unaffected:</b> {i.unaffected.join(' · ')||'—'}</div></td></tr>)}</tbody></table>:<p className="muted">No incidents recorded. Telemetry is within baseline.</p>}</div>}

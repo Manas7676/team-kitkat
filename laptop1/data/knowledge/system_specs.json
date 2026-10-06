@@ -1,0 +1,96 @@
+[
+ {
+  "id": "THERMAL-SPEC-04",
+  "name": "Thermal sensor specification",
+  "text": "Redundant thermal sensors must agree within 15 °C; nominal range 20–60 °C. Disagreement above tolerance triggers sensor validation.",
+  "tags": [
+   "thermal_01",
+   "thermal",
+   "sensor",
+   "temperature",
+   "disagreement",
+   "redundant"
+  ]
+ },
+ {
+  "id": "POWER-SPEC-02",
+  "name": "Power system specification",
+  "text": "Bus voltage nominal 20–22 V; battery SOC below 50 % is a low-energy condition.",
+  "tags": [
+   "power_01",
+   "power",
+   "power",
+   "voltage",
+   "battery",
+   "solar",
+   "degradation"
+  ]
+ },
+ {
+  "id": "NOISE-SPEC-01",
+  "name": "Sensor noise specification",
+  "text": "Channel standard deviation above 1.5 °C over 8 s exceeds expected measurement noise.",
+  "tags": [
+   "noise_01",
+   "thermal",
+   "noise",
+   "fluctuation",
+   "sensor",
+   "redundant"
+  ]
+ },
+ {
+  "id": "ATT-SPEC-01",
+  "name": "Attitude control specification",
+  "text": "Pointing deviation above 5° exceeds attitude tolerance.",
+  "tags": [
+   "attitude_01",
+   "attitude",
+   "attitude",
+   "pointing",
+   "drift",
+   "gyroscope"
+  ]
+ },
+ {
+  "id": "COMM-SPEC-03",
+  "name": "Communication link specification",
+  "text": "Link requires signal above -80 dBm and latency under 350 ms.",
+  "tags": [
+   "comm_01",
+   "communication",
+   "signal",
+   "latency",
+   "antenna",
+   "link"
+  ]
+ },
+ {
+  "id": "PAYLOAD-SPEC-05",
+  "name": "Payload specification",
+  "text": "Payload load nominal 10–50 W; above 50 W indicates overload.",
+  "tags": [
+   "payload_01",
+   "payload",
+   "payload",
+   "load",
+   "overload",
+   "duty"
+  ]
+ },
+ {
+  "id": "DEP-SPEC-07",
+  "name": "Power chain specification",
+  "text": "Solar loss propagates: solar → power → battery → bus voltage → payload and communication.",
+  "tags": [
+   "cascade_01",
+   "power",
+   "cascade",
+   "propagation",
+   "solar",
+   "power",
+   "battery",
+   "communication"
+  ]
+ }
+]

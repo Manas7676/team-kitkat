@@ -1,0 +1,121 @@
+{
+ "THERMAL_01": [
+  {
+   "id": "FM-THE-1",
+   "cause": "Sensor A malfunction",
+   "prior": 87
+  },
+  {
+   "id": "FM-THE-2",
+   "cause": "Localized thermal event",
+   "prior": 9
+  },
+  {
+   "id": "FM-THE-3",
+   "cause": "Power-related heating",
+   "prior": 4
+  }
+ ],
+ "POWER_01": [
+  {
+   "id": "FM-POW-1",
+   "cause": "Solar array output reduction",
+   "prior": 55
+  },
+  {
+   "id": "FM-POW-2",
+   "cause": "Battery degradation",
+   "prior": 30
+  },
+  {
+   "id": "FM-POW-3",
+   "cause": "Excess load",
+   "prior": 15
+  }
+ ],
+ "NOISE_01": [
+  {
+   "id": "FM-NOI-1",
+   "cause": "Sensor electronics or harness noise",
+   "prior": 60
+  },
+  {
+   "id": "FM-NOI-2",
+   "cause": "Electromagnetic interference",
+   "prior": 25
+  },
+  {
+   "id": "FM-NOI-3",
+   "cause": "Real thermal fluctuation",
+   "prior": 15
+  }
+ ],
+ "ATTITUDE_01": [
+  {
+   "id": "FM-ATT-1",
+   "cause": "Gyroscope bias drift",
+   "prior": 50
+  },
+  {
+   "id": "FM-ATT-2",
+   "cause": "Reaction wheel saturation",
+   "prior": 35
+  },
+  {
+   "id": "FM-ATT-3",
+   "cause": "Star tracker misalignment",
+   "prior": 15
+  }
+ ],
+ "COMM_01": [
+  {
+   "id": "FM-COM-1",
+   "cause": "Antenna pointing offset",
+   "prior": 45
+  },
+  {
+   "id": "FM-COM-2",
+   "cause": "Transmitter degradation",
+   "prior": 35
+  },
+  {
+   "id": "FM-COM-3",
+   "cause": "Link interference",
+   "prior": 20
+  }
+ ],
+ "PAYLOAD_01": [
+  {
+   "id": "FM-PAY-1",
+   "cause": "Payload duty-cycle overrun",
+   "prior": 55
+  },
+  {
+   "id": "FM-PAY-2",
+   "cause": "Payload electronics fault",
+   "prior": 30
+  },
+  {
+   "id": "FM-PAY-3",
+   "cause": "Sensor misreport",
+   "prior": 15
+  }
+ ],
+ "CASCADE_01": [
+  {
+   "id": "FM-CAS-1",
+   "cause": "Primary solar generation loss",
+   "prior": 60
+  },
+  {
+   "id": "FM-CAS-2",
+   "cause": "Power distribution fault",
+   "prior": 25
+  },
+  {
+   "id": "FM-CAS-3",
+   "cause": "Coincident independent faults",
+   "prior": 15
+  }
+ ]
+}

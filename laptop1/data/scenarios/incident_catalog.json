@@ -1,0 +1,369 @@
+{
+ "CASCADE_01": {
+  "priority": 1,
+  "title": "Cascading Failure",
+  "subsystem": "Power",
+  "sev": "HIGH",
+  "kw": [
+   "cascade",
+   "propagation",
+   "solar",
+   "power",
+   "battery",
+   "communication"
+  ],
+  "trigger": [
+   [
+    "power_sig",
+    ">=",
+    1
+   ],
+   [
+    "comm_deg",
+    ">=",
+    1
+   ]
+  ],
+  "trigger_text": "Power degradation signature together with communication degradation",
+  "key": [
+   "solar_generation",
+   "battery_soc",
+   "bus_voltage",
+   "payload_load",
+   "communication_signal"
+  ],
+  "affected": [
+   [
+    "Solar Generation",
+    "solar_generation",
+    "Power"
+   ],
+   [
+    "Power System",
+    "bus_voltage",
+    "Power"
+   ],
+   [
+    "Battery",
+    "battery_soc",
+    "Power"
+   ],
+   [
+    "Payload",
+    "payload_load",
+    "Payload"
+   ],
+   [
+    "Communications",
+    "communication_signal",
+    "Communication"
+   ]
+  ],
+  "potential": [],
+  "outcome": [
+   "Power margin restored first",
+   "Payload load reduced",
+   "Communication link recovering",
+   "Investigation confidence updated"
+  ]
+ },
+ "THERMAL_01": {
+  "priority": 2,
+  "title": "Thermal Sensor Anomaly",
+  "subsystem": "Thermal",
+  "kw": [
+   "sensor",
+   "temperature",
+   "disagreement",
+   "redundant"
+  ],
+  "trigger": [
+   [
+    "tdiff",
+    ">",
+    20
+   ],
+   [
+    "temperature_a",
+    ">",
+    75
+   ]
+  ],
+  "trigger_text": "Sensor A exceeds redundant sensors B/C by more than 20 °C and is above 75 °C",
+  "key": [
+   "temperature_a",
+   "temperature_b",
+   "temperature_c"
+  ],
+  "affected": [
+   [
+    "Thermal Sensor A",
+    "temperature_a",
+    "Thermal"
+   ]
+  ],
+  "potential": [
+   [
+    "Thermal Subsystem",
+    "temperature_b",
+    "Thermal"
+   ]
+  ],
+  "outcome": [
+   "Sensor A trend stabilizing",
+   "Redundant sensors remain nominal",
+   "Investigation confidence updated"
+  ]
+ },
+ "POWER_01": {
+  "priority": 3,
+  "title": "Power Degradation",
+  "subsystem": "Power",
+  "kw": [
+   "power",
+   "voltage",
+   "battery",
+   "solar",
+   "degradation"
+  ],
+  "trigger": [
+   [
+    "power_sig",
+    ">=",
+    1
+   ]
+  ],
+  "trigger_text": "Battery SOC < 58 %, bus voltage < 19.5 V or solar generation < 110 W",
+  "key": [
+   "bus_voltage",
+   "battery_soc",
+   "solar_generation"
+  ],
+  "affected": [
+   [
+    "Battery",
+    "battery_soc",
+    "Power"
+   ],
+   [
+    "Power Distribution",
+    "bus_voltage",
+    "Power"
+   ],
+   [
+    "Solar Array",
+    "solar_generation",
+    "Power"
+   ],
+   [
+    "Payload",
+    "payload_load",
+    "Payload"
+   ]
+  ],
+  "potential": [
+   [
+    "Communications",
+    "communication_signal",
+    "Communication"
+   ]
+  ],
+  "outcome": [
+   "Non-critical loads shed in simulation",
+   "Bus voltage recovering",
+   "Battery discharge rate reduced"
+  ]
+ },
+ "COMM_01": {
+  "priority": 4,
+  "title": "Communication Degradation",
+  "subsystem": "Communication",
+  "kw": [
+   "signal",
+   "latency",
+   "antenna",
+   "link"
+  ],
+  "trigger": [
+   [
+    "comm_deg",
+    ">=",
+    1
+   ],
+   [
+    "power_sig",
+    "<",
+    1
+   ]
+  ],
+  "trigger_text": "Signal < -75 dBm or latency > 300 ms without power degradation",
+  "key": [
+   "communication_signal",
+   "communication_latency"
+  ],
+  "affected": [
+   [
+    "Communication Antenna",
+    "communication_signal",
+    "Communication"
+   ],
+   [
+    "Communications Link",
+    "communication_latency",
+    "Communication"
+   ]
+  ],
+  "potential": [
+   [
+    "Ground Communication",
+    "communication_latency",
+    "Communication"
+   ]
+  ],
+  "outcome": [
+   "Link margin improving after simulated re-pointing",
+   "Latency trending down"
+  ]
+ },
+ "PAYLOAD_01": {
+  "priority": 5,
+  "title": "Payload Overload",
+  "subsystem": "Payload",
+  "kw": [
+   "payload",
+   "load",
+   "overload",
+   "duty"
+  ],
+  "trigger": [
+   [
+    "payload_load",
+    ">",
+    50
+   ]
+  ],
+  "trigger_text": "Payload load > 50 W",
+  "key": [
+   "payload_load",
+   "power",
+   "battery_soc"
+  ],
+  "affected": [
+   [
+    "Payload",
+    "payload_load",
+    "Payload"
+   ],
+   [
+    "Power System",
+    "power",
+    "Power"
+   ],
+   [
+    "Battery",
+    "battery_soc",
+    "Power"
+   ]
+  ],
+  "potential": [],
+  "outcome": [
+   "Payload placed in standby in simulation",
+   "Power draw returning to baseline"
+  ]
+ },
+ "ATTITUDE_01": {
+  "priority": 6,
+  "title": "Attitude Drift",
+  "subsystem": "Attitude",
+  "kw": [
+   "attitude",
+   "pointing",
+   "drift",
+   "gyroscope"
+  ],
+  "trigger": [
+   [
+    "attitude_deviation",
+    ">",
+    5
+   ]
+  ],
+  "trigger_text": "Attitude deviation > 5°",
+  "key": [
+   "attitude_deviation"
+  ],
+  "affected": [
+   [
+    "Attitude Sensors",
+    "attitude_deviation",
+    "Attitude"
+   ],
+   [
+    "Attitude Control",
+    "attitude_deviation",
+    "Attitude"
+   ]
+  ],
+  "potential": [
+   [
+    "Communication Antenna Pointing",
+    "communication_signal",
+    "Communication"
+   ]
+  ],
+  "outcome": [
+   "Gyro/star-tracker cross-check completed in simulation",
+   "Deviation trending down"
+  ]
+ },
+ "NOISE_01": {
+  "priority": 7,
+  "title": "Sensor Noise",
+  "subsystem": "Thermal",
+  "sev": "MEDIUM",
+  "state": "WARNING",
+  "always": true,
+  "kw": [
+   "noise",
+   "fluctuation",
+   "sensor",
+   "redundant"
+  ],
+  "trigger": [
+   [
+    "noisy",
+    ">=",
+    2
+   ]
+  ],
+  "trigger_text": "Standard deviation of two or more temperature channels > 1.5 °C over 8 s",
+  "key": [
+   "temperature_a",
+   "temperature_b",
+   "temperature_c",
+   "bus_voltage"
+  ],
+  "affected": [
+   [
+    "Thermal Sensor A",
+    "temperature_a",
+    "Thermal"
+   ],
+   [
+    "Thermal Sensor B",
+    "temperature_b",
+    "Thermal"
+   ],
+   [
+    "Thermal Sensor C",
+    "temperature_c",
+    "Thermal"
+   ]
+  ],
+  "potential": [],
+  "outcome": [
+   "Filtering applied in simulation",
+   "Channel variance returning to baseline"
+  ]
+ }
+}

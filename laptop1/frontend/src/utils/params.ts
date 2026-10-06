@@ -1,0 +1,3 @@
+export const PARAMS:[string,string,string,number,number][]=[["temperature_a","Temperature A","°C",20,60],["temperature_b","Temperature B","°C",20,60],["temperature_c","Temperature C","°C",20,60],["bus_voltage","Bus Voltage","V",20,22],["current","Current","A",1.5,2.8],["power","Power","W",30,60],["battery_soc","Battery SOC","%",50,100],["solar_generation","Solar Generation","W",100,200],["attitude_deviation","Attitude Deviation","°",0,5],["communication_signal","Comm Signal","dBm",-90,-40],["communication_latency","Comm Latency","ms",0,400],["payload_load","Payload Load","W",10,50]];
+export const pstatus=(k:string,v:number)=>{const p=PARAMS.find(x=>x[0]==k)!;return v<p[3]||v>p[4]?"WARNING":"NORMAL"};
+export const cls=(s:string)=>"st-"+(s||"").toLowerCase();

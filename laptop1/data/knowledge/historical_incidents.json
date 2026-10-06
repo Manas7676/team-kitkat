@@ -1,0 +1,103 @@
+[
+ {
+  "id": "HIST-017",
+  "name": "Previous thermal sensor disagreement",
+  "text": "Previous thermal sensor disagreement; resolved by: Sensor recalibration.",
+  "resolution": "Sensor recalibration",
+  "tags": [
+   "thermal_01",
+   "thermal",
+   "sensor",
+   "temperature",
+   "disagreement",
+   "redundant"
+  ]
+ },
+ {
+  "id": "HIST-009",
+  "name": "Bus voltage sag during eclipse exit",
+  "text": "Bus voltage sag during eclipse exit; resolved by: Load shedding restored margins.",
+  "resolution": "Load shedding restored margins",
+  "tags": [
+   "power_01",
+   "power",
+   "power",
+   "voltage",
+   "battery",
+   "solar",
+   "degradation"
+  ]
+ },
+ {
+  "id": "HIST-052",
+  "name": "Intermittent harness noise on thermal channels",
+  "text": "Intermittent harness noise on thermal channels; resolved by: Connector reseat cleared noise.",
+  "resolution": "Connector reseat cleared noise",
+  "tags": [
+   "noise_01",
+   "thermal",
+   "noise",
+   "fluctuation",
+   "sensor",
+   "redundant"
+  ]
+ },
+ {
+  "id": "HIST-023",
+  "name": "Attitude drift",
+  "text": "Attitude drift; resolved by: Reaction wheel desaturation.",
+  "resolution": "Reaction wheel desaturation",
+  "tags": [
+   "attitude_01",
+   "attitude",
+   "attitude",
+   "pointing",
+   "drift",
+   "gyroscope"
+  ]
+ },
+ {
+  "id": "HIST-031",
+  "name": "Signal degradation from antenna pointing offset",
+  "text": "Signal degradation from antenna pointing offset; resolved by: Antenna re-pointed.",
+  "resolution": "Antenna re-pointed",
+  "tags": [
+   "comm_01",
+   "communication",
+   "signal",
+   "latency",
+   "antenna",
+   "link"
+  ]
+ },
+ {
+  "id": "HIST-044",
+  "name": "Payload overdraw",
+  "text": "Payload overdraw; resolved by: Duty-cycle reduction.",
+  "resolution": "Duty-cycle reduction",
+  "tags": [
+   "payload_01",
+   "payload",
+   "payload",
+   "load",
+   "overload",
+   "duty"
+  ]
+ },
+ {
+  "id": "HIST-061",
+  "name": "Eclipse power loss cascaded into communication degradation",
+  "text": "Eclipse power loss cascaded into communication degradation; resolved by: Power-first recovery sequence.",
+  "resolution": "Power-first recovery sequence",
+  "tags": [
+   "cascade_01",
+   "power",
+   "cascade",
+   "propagation",
+   "solar",
+   "power",
+   "battery",
+   "communication"
+  ]
+ }
+]
