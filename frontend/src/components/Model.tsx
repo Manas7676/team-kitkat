@@ -1,0 +1,5 @@
+export default function Model({hot}:{hot?:string}){const L=(x:number,y:number,t:string,c='#1f3a5f')=><text x={x} y={y} fontSize="11" fill={c}>{t}</text>;
+return <svg viewBox="0 0 420 240" width="100%"><rect x="20" y="95" width="140" height="50" fill="#1e4fa3" stroke="#0b2447"/><rect x="260" y="95" width="140" height="50" fill="#1e4fa3" stroke="#0b2447"/>
+<rect x="165" y="80" width="90" height="80" fill="#d9dde3" stroke="#0b2447"/><circle cx="210" cy="60" r="16" fill="none" stroke="#2563eb" strokeWidth="2"/><line x1="210" y1="76" x2="210" y2="80" stroke="#2563eb"/>
+<circle cx="258" cy="84" r="5" fill={hot=="ANOMALY"?"#dc2626":"#16a34a"}/><circle cx="172" cy="150" r="5" fill="#f59e0b"/><circle cx="210" cy="152" r="5" fill="#16a34a"/><circle cx="246" cy="130" r="5" fill="#2563eb"/><circle cx="172" cy="86" r="5" fill="#7c3aed"/>
+{L(150,30,'Communication Antenna')}{L(20,85,'Solar Panels')}{L(264,72,'Thermal Sensors A/B/C',hot=="ANOMALY"?'#dc2626':'#1f3a5f')}{L(60,78,'Attitude Sensors','#7c3aed')}{L(110,185,'Power System (V, I)','#b45309')}{L(190,205,'Battery')}{L(280,160,'Payload')}</svg>}
