@@ -1,0 +1,22 @@
+{
+ "id": "DEP-01",
+ "name": "Subsystem dependency map",
+ "edges": {
+  "Power": [
+   "Battery",
+   "Payload",
+   "Communication",
+   "Thermal"
+  ],
+  "Thermal": [
+   "Power"
+  ],
+  "Attitude": [
+   "Communication"
+  ],
+  "Communication": [],
+  "Payload": [
+   "Power"
+  ]
+ }
+}

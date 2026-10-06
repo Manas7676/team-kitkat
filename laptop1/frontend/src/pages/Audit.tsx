@@ -1,0 +1,1 @@
+export default function Audit({L}:{L:any}){return <div className="card"><h3>Audit Log</h3>{L.audit.length?L.audit.map((a:any,i:number)=><div className="row" key={i}><b>{a.time}</b><span style={{flex:1,marginLeft:16}}>{a.event}</span></div>):<p className="muted">No events yet.</p>}</div>}

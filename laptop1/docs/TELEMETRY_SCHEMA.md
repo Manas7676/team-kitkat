@@ -1,0 +1,1 @@
+See ST10-Laptop1/docs/CONTRACT.md. Fields: timestamp, temperature_a/b/c (C), bus_voltage (V), current (A), power (W), battery_soc (%), solar_generation (W), attitude_deviation (deg), communication_signal (dBm), communication_latency (ms), payload_load (W). Scenario IDs THERMAL_01 POWER_01 NOISE_01 ATTITUDE_01 COMM_01 PAYLOAD_01 CASCADE_01.

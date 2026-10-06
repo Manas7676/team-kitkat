@@ -1,0 +1,26 @@
+[
+ {
+  "id": "HIST-017",
+  "title": "Thermal sensor disagreement",
+  "resolution": "Sensor recalibration",
+  "similarity": 82,
+  "subsystem": "Thermal",
+  "scenario_id": "THERMAL_01"
+ },
+ {
+  "id": "HIST-009",
+  "title": "Bus voltage sag during eclipse exit",
+  "resolution": "Load shedding, nominal recovery",
+  "similarity": 31,
+  "subsystem": "Power",
+  "scenario_id": "POWER_01"
+ },
+ {
+  "id": "HIST-023",
+  "title": "Antenna pointing drift",
+  "resolution": "Reaction wheel desaturation",
+  "similarity": 18,
+  "subsystem": "Attitude",
+  "scenario_id": "ATTITUDE_01"
+ }
+]
